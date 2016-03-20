@@ -13,4 +13,183 @@ blogger_id: tag:blogger.com,1999:blog-4727318240760747618.post-43212123268177345
 blogger_orig_url: http://www.socalledprogrammer.com/2015/02/eat-your-vegetables-lesson-in-code.html
 ---
 
-<div>Code review can be like eating vegetables. It can be boring, tedious, and sometimes the source of bitterness. Plus the entire time you're tempted to just half-ass it because "Oh I'm sure QA will catch any errors" (you do have a QA process, right?).&nbsp;</div><div><br /></div><div>But just like vegetables I think it's safe to say that code review is not only necessary but also good for you. The time required to do is greatly outweighed by the benefits:</div><div><ul><li>Increases the&nbsp;<a href="http://en.wikipedia.org/wiki/Bus_factor">Bus Factor</a>&nbsp;of the code base by exposing more team members to code</li><li>Provides learning opportunities to both the reviewer and reviewee</li><li>Just the fear of public humiliation discourages developers from cutting corners</li></ul><div>Plus there's much more, but that's not really the point here. You know that you need to do code review but how do you even start? Here's a few tips for doing code review with your team:</div></div><div><br /></div><h2>Choose a Format</h2><table cellpadding="0" cellspacing="0" class="tr-caption-container" style="float: right; margin-left: 1em; text-align: right;"><tbody><tr><td style="text-align: center;"><a href="http://3.bp.blogspot.com/-g8jj2v_pf6c/VN0unTqiY7I/AAAAAAAACOk/vgqRA0OVmfE/s1600/knights_of_the_round_table_YT7164-345x348.jpg" imageanchor="1" style="clear: right; margin-bottom: 1em; margin-left: auto; margin-right: auto;"><img border="0" src="http://3.bp.blogspot.com/-g8jj2v_pf6c/VN0unTqiY7I/AAAAAAAACOk/vgqRA0OVmfE/s1600/knights_of_the_round_table_YT7164-345x348.jpg" height="320" width="316" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;"><div style="text-align: left;"><i>Ok, everyone stab as many bugs as you can</i></div></td></tr></tbody></table><div><b><br /></b></div><div><b>Round table session:</b></div><div>A small team gets together and reviews the each of the commits done during the day. The author of the commit explains what's going on in the code while the rest of the teams listens. Generally I think the code should speak for itself, but we were in consulting working on different projects so a little context helped figure out what was trying to be done. However, this can be really disruptive because you basically need to scheduled out an hour or so everyday to have this meeting. Also, some people may be reluctant to speak up at a group meeting.</div><div><br /></div><div><b>Gatekeeper:</b></div><div><div>A designated person (or people) are assigned the task of doing code review for the team. I only recommend this style of coding if you're using outsourced developers and you are having trouble getting them to do code review. You lose a lot of the benefits of code review this way, but it's better than nothing. Also if the gatekeeper is doing any coding then who, uh, gatekeeps(?) the gatekeeper?</div></div><div><br /></div><div><b>Individual Commit Review:</b></div><div>At least two other members of the team individually reviews your code . This allows people to do code review on their own time. However, going through EACH commit can be a little tedious.&nbsp;</div><div><br /></div><div><b>Pull Request Review:</b></div><div>Your pull request is reviewed by at least two individuals. This one is my favorite, as it allows for something cohesive be reviewed as opposed to just chunks of code. However, don't let too much time pass between pull requests or you're going to have MASSIVE amounts of code to review, allowing for great opportunities of things to slip through unnoticed.</div><div><br /></div><h2>Lay Some Ground Rules</h2><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="float: left; margin-right: 1em; text-align: left;"><tbody><tr><td style="text-align: center;"><a href="http://3.bp.blogspot.com/-Rgn2NMjOwaA/VN0wd7pcBRI/AAAAAAAACOw/72clb6iGs0A/s1600/FightClub_136Pyxurz.jpg" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" src="http://3.bp.blogspot.com/-Rgn2NMjOwaA/VN0wd7pcBRI/AAAAAAAACOw/72clb6iGs0A/s1600/FightClub_136Pyxurz.jpg" height="209" width="320" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;"><i>The first rule of code review is no fighting.<br />Fight club is Tuesday after the requirements gathering meeting.</i></td></tr></tbody></table><div>Now that you've chosen a format, make sure to lay some ground rules to help keep code review focused on what's important. Here are a few suggestions:</div><div><br /></div><div><b>DO NOT make any personal comments about the author of the code</b></div><div>Nothing constructive comes out of comments like, "This is so dumb, why would you do it like that?" Instead, ask constructive questions like, "Can you restructure this to use X?" This opens the door to a discussion instead of an argument, allowing the author to explain themselves or see the error.</div><div><br /></div><div><b>DO NOT take any criticism personally</b></div><div>On the flip side, don't immediately get defensive when someone criticizes your code. The team doesn't don't (or at least shouldn't) care who wrote the code; they just want it to be done well. Take criticism as an opportunity to become a better programmer.</div><div><br /></div><div><b>There must be reasoning behind your criticism</b></div><div>Vague complaints like "I don't like it" or "It doesn't feel right" are not valid criticisms. This is not to say you should just stay quiet if something seems awry, but you need to give some direction as to what needs to be done. I can't do anything with just "I don't like it." Also, saying something is not "best practice" is not enough; you need to say why isn't it a best practice. In fact, check out this <a href="https://bookofbadarguments.com/?view=allpages">delightfully cute book on fallacious arguments </a>to help you figure out what's a good argument.</div><div><br /></div><div><b>Decide what's in the scope of code review</b></div><div>This is a little more subjective, but your team will need to agree upon what's subject to code review or you may find yourself squabbling over trivial issues. Do you care about whitespace? (you should) Do all web pages need to be mobile friendly? These things come down to establishing coding standards (a whole different discussion), that serve as a (flexible) baseline as to what will be discussed.&nbsp;</div><div><br /></div><h2>Code Review Checklist</h2><div>This is definitely not all-inclusive, but it's generally what I look for while doing code reviews (for Salesforce projects)</div><div><br /></div><div><b>Triggers</b></div><div><ul><li>Is the trigger bulk safe?</li><li>Is it safe from recursion?</li><li>Has the been logic abstracted out of the trigger?</li><li>Does the trigger use the correct trigger context?</li><ul><li>e.g. Are updates to non-trigger objects done in the <b>after</b>&nbsp;context?</li></ul><li>Have all of the trigger contexts been tested?</li><li>Can the trigger be done with a workflow instead?</li></ul><div><b>Visualforce</b></div></div><div><ul><li>Have repetitive layouts been abstracted out into a component?</li><li>Has Javascript/CSS been moved to a public static resource to take advantage of caching?</li><ul><li>There are exceptions to this such as needing to use merge fields</li></ul><li>Does the CSS use !important (they shouldn't)</li><li>Are custom labels used as opposed to hard coded text? (Especially important for multi-language orgs)</li></ul><div><b>Governor Limits</b></div></div><div><ul><li>Are all SOQL calls outside of loops?</li><ul><li>Remember to check if methods that contain SOQL are not called in loops</li></ul><li>Are all future calls outside of loops?</li><li>Are all callouts outside of loops?</li><li>Are all DML calls outside of loops?</li></ul><div><b>Tests</b></div></div><div><ul><li>Do the tests have valid assertions?</li><li>Have the creation of test records been abstracted out?</li><li>Are all public methods tested?</li></ul><div><b>Miscellaneous</b></div></div><div><ul><li>Are all comments necessary and valid?</li><li>Is the code as modular as possible?</li><ul><li>If you have to scroll to see what a method does, it's probably too long</li></ul><li>Have inputs been sanitized as necessary?</li><ul><li>String.escapeSingleQuotes is your friend!</li></ul><li>Is everything only as visible as needed?</li><ul><li>I default to private before making something public</li></ul></ul><div><b>And for our Managed Package friends</b></div></div><div><ul><li>Are any namespaced items called by a string?</li><ul><li>Salesforce will change record.MyField__c to record.myNamespace__MyField__c, but it will not be able to pick up record.put('MyField__c', aValue) and you'll get an exception at run time.</li></ul><li>Are you sure you want that method/class to be global?</li><li>Are new fields the correct data type?</li><ul><li>This is always important, but in a Managed Package it's forever.</li></ul></ul><div>Again, this is not all inclusive and it should be treated as a guideline, not as a strict rule. There are exceptions to everything and sometimes you have to skip things and take the technical debt in order to get something out in time.&nbsp;</div></div><div><br /></div><div>So get out there and start that code review! Because while it's not always fun to eat your veggies, you'll wished you did when things blowing up and you are all backed up.</div>
+<div>Code review can be like eating vegetables. It can be boring, tedious, and sometimes the source of bitterness. Plus the entire time you're tempted to just half-ass it because "Oh I'm sure QA will catch any errors" (you do have a QA process, right?).&nbsp;</div>
+<!--break-->
+<div>
+    <br />
+</div>
+<div>But just like vegetables I think it's safe to say that code review is not only necessary but also good for you. The time required to do is greatly outweighed by the benefits:</div>
+<div>
+    <ul>
+        <li>Increases the&nbsp;<a href="http://en.wikipedia.org/wiki/Bus_factor">Bus Factor</a>&nbsp;of the code base by exposing more team members to code</li>
+        <li>Provides learning opportunities to both the reviewer and reviewee</li>
+        <li>Just the fear of public humiliation discourages developers from cutting corners</li>
+    </ul>
+    <div>Plus there's much more, but that's not really the point here. You know that you need to do code review but how do you even start? Here's a few tips for doing code review with your team:</div>
+</div>
+<div>
+    <br />
+</div>
+<h2>Choose a Format</h2>
+<table cellpadding="0" cellspacing="0" class="tr-caption-container" style="float: right; margin-left: 1em; text-align: right;">
+    <tbody>
+        <tr>
+            <td style="text-align: center;">
+                <a href="http://3.bp.blogspot.com/-g8jj2v_pf6c/VN0unTqiY7I/AAAAAAAACOk/vgqRA0OVmfE/s1600/knights_of_the_round_table_YT7164-345x348.jpg" imageanchor="1" style="clear: right; margin-bottom: 1em; margin-left: auto; margin-right: auto;"><img border="0" src="http://3.bp.blogspot.com/-g8jj2v_pf6c/VN0unTqiY7I/AAAAAAAACOk/vgqRA0OVmfE/s1600/knights_of_the_round_table_YT7164-345x348.jpg" height="320" width="316" /></a>
+            </td>
+        </tr>
+        <tr>
+            <td class="tr-caption" style="text-align: center;">
+                <div style="text-align: left;"><i>Ok, everyone stab as many bugs as you can</i></div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<div><b><br /></b></div>
+<div><b>Round table session:</b></div>
+<div>A small team gets together and reviews the each of the commits done during the day. The author of the commit explains what's going on in the code while the rest of the teams listens. Generally I think the code should speak for itself, but we were in consulting working on different projects so a little context helped figure out what was trying to be done. However, this can be really disruptive because you basically need to scheduled out an hour or so everyday to have this meeting. Also, some people may be reluctant to speak up at a group meeting.</div>
+<div>
+    <br />
+</div>
+<div><b>Gatekeeper:</b></div>
+<div>
+    <div>A designated person (or people) are assigned the task of doing code review for the team. I only recommend this style of coding if you're using outsourced developers and you are having trouble getting them to do code review. You lose a lot of the benefits of code review this way, but it's better than nothing. Also if the gatekeeper is doing any coding then who, uh, gatekeeps(?) the gatekeeper?</div>
+</div>
+<div>
+    <br />
+</div>
+<div><b>Individual Commit Review:</b></div>
+<div>At least two other members of the team individually reviews your code . This allows people to do code review on their own time. However, going through EACH commit can be a little tedious.&nbsp;</div>
+<div>
+    <br />
+</div>
+<div><b>Pull Request Review:</b></div>
+<div>Your pull request is reviewed by at least two individuals. This one is my favorite, as it allows for something cohesive be reviewed as opposed to just chunks of code. However, don't let too much time pass between pull requests or you're going to have MASSIVE amounts of code to review, allowing for great opportunities of things to slip through unnoticed.</div>
+<div>
+    <br />
+</div>
+<h2>Lay Some Ground Rules</h2>
+<table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="float: left; margin-right: 1em; text-align: left;">
+    <tbody>
+        <tr>
+            <td style="text-align: center;">
+                <a href="http://3.bp.blogspot.com/-Rgn2NMjOwaA/VN0wd7pcBRI/AAAAAAAACOw/72clb6iGs0A/s1600/FightClub_136Pyxurz.jpg" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" src="http://3.bp.blogspot.com/-Rgn2NMjOwaA/VN0wd7pcBRI/AAAAAAAACOw/72clb6iGs0A/s1600/FightClub_136Pyxurz.jpg" height="209" width="320" /></a>
+            </td>
+        </tr>
+        <tr>
+            <td class="tr-caption" style="text-align: center;"><i>The first rule of code review is no fighting.<br />Fight club is Tuesday after the requirements gathering meeting.</i></td>
+        </tr>
+    </tbody>
+</table>
+<div>Now that you've chosen a format, make sure to lay some ground rules to help keep code review focused on what's important. Here are a few suggestions:</div>
+<div>
+    <br />
+</div>
+<div><b>DO NOT make any personal comments about the author of the code</b></div>
+<div>Nothing constructive comes out of comments like, "This is so dumb, why would you do it like that?" Instead, ask constructive questions like, "Can you restructure this to use X?" This opens the door to a discussion instead of an argument, allowing the author to explain themselves or see the error.</div>
+<div>
+    <br />
+</div>
+<div><b>DO NOT take any criticism personally</b></div>
+<div>On the flip side, don't immediately get defensive when someone criticizes your code. The team doesn't don't (or at least shouldn't) care who wrote the code; they just want it to be done well. Take criticism as an opportunity to become a better programmer.</div>
+<div>
+    <br />
+</div>
+<div><b>There must be reasoning behind your criticism</b></div>
+<div>Vague complaints like "I don't like it" or "It doesn't feel right" are not valid criticisms. This is not to say you should just stay quiet if something seems awry, but you need to give some direction as to what needs to be done. I can't do anything with just "I don't like it." Also, saying something is not "best practice" is not enough; you need to say why isn't it a best practice. In fact, check out this <a href="https://bookofbadarguments.com/?view=allpages">delightfully cute book on fallacious arguments </a>to help you figure out what's a good argument.</div>
+<div>
+    <br />
+</div>
+<div><b>Decide what's in the scope of code review</b></div>
+<div>This is a little more subjective, but your team will need to agree upon what's subject to code review or you may find yourself squabbling over trivial issues. Do you care about whitespace? (you should) Do all web pages need to be mobile friendly? These things come down to establishing coding standards (a whole different discussion), that serve as a (flexible) baseline as to what will be discussed.&nbsp;</div>
+<div>
+    <br />
+</div>
+<h2>Code Review Checklist</h2>
+<div>This is definitely not all-inclusive, but it's generally what I look for while doing code reviews (for Salesforce projects)</div>
+<div>
+    <br />
+</div>
+<div><b>Triggers</b></div>
+<div>
+    <ul>
+        <li>Is the trigger bulk safe?</li>
+        <li>Is it safe from recursion?</li>
+        <li>Has the been logic abstracted out of the trigger?</li>
+        <li>Does the trigger use the correct trigger context?</li>
+        <ul>
+            <li>e.g. Are updates to non-trigger objects done in the <b>after</b>&nbsp;context?</li>
+        </ul>
+        <li>Have all of the trigger contexts been tested?</li>
+        <li>Can the trigger be done with a workflow instead?</li>
+    </ul>
+    <div><b>Visualforce</b></div>
+</div>
+<div>
+    <ul>
+        <li>Have repetitive layouts been abstracted out into a component?</li>
+        <li>Has Javascript/CSS been moved to a public static resource to take advantage of caching?</li>
+        <ul>
+            <li>There are exceptions to this such as needing to use merge fields</li>
+        </ul>
+        <li>Does the CSS use !important (they shouldn't)</li>
+        <li>Are custom labels used as opposed to hard coded text? (Especially important for multi-language orgs)</li>
+    </ul>
+    <div><b>Governor Limits</b></div>
+</div>
+<div>
+    <ul>
+        <li>Are all SOQL calls outside of loops?</li>
+        <ul>
+            <li>Remember to check if methods that contain SOQL are not called in loops</li>
+        </ul>
+        <li>Are all future calls outside of loops?</li>
+        <li>Are all callouts outside of loops?</li>
+        <li>Are all DML calls outside of loops?</li>
+    </ul>
+    <div><b>Tests</b></div>
+</div>
+<div>
+    <ul>
+        <li>Do the tests have valid assertions?</li>
+        <li>Have the creation of test records been abstracted out?</li>
+        <li>Are all public methods tested?</li>
+    </ul>
+    <div><b>Miscellaneous</b></div>
+</div>
+<div>
+    <ul>
+        <li>Are all comments necessary and valid?</li>
+        <li>Is the code as modular as possible?</li>
+        <ul>
+            <li>If you have to scroll to see what a method does, it's probably too long</li>
+        </ul>
+        <li>Have inputs been sanitized as necessary?</li>
+        <ul>
+            <li>String.escapeSingleQuotes is your friend!</li>
+        </ul>
+        <li>Is everything only as visible as needed?</li>
+        <ul>
+            <li>I default to private before making something public</li>
+        </ul>
+    </ul>
+    <div><b>And for our Managed Package friends</b></div>
+</div>
+<div>
+    <ul>
+        <li>Are any namespaced items called by a string?</li>
+        <ul>
+            <li>Salesforce will change record.MyField__c to record.myNamespace__MyField__c, but it will not be able to pick up record.put('MyField__c', aValue) and you'll get an exception at run time.</li>
+        </ul>
+        <li>Are you sure you want that method/class to be global?</li>
+        <li>Are new fields the correct data type?</li>
+        <ul>
+            <li>This is always important, but in a Managed Package it's forever.</li>
+        </ul>
+    </ul>
+    <div>Again, this is not all inclusive and it should be treated as a guideline, not as a strict rule. There are exceptions to everything and sometimes you have to skip things and take the technical debt in order to get something out in time.&nbsp;</div>
+</div>
+<div>
+    <br />
+</div>
+<div>So get out there and start that code review! Because while it's not always fun to eat your veggies, you'll wished you did when things blowing up and you are all backed up.</div>
