@@ -11,7 +11,7 @@ email: sean.cuevo@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   My personal blog about web development, mainly Salesforce related.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://seanpat09.github.io/" # the base hostname & protocol for your site
+url: "http://seanpat09.github.io" # the base hostname & protocol for your site
 twitter_username: squizzleflip
 github_username:  seanpat09
 
