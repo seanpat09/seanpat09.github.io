@@ -1,0 +1,78 @@
+---
+layout: post
+title: Getting Sassy! Namespacing Bootstrap
+date: '2016-01-13T09:50:00.002-08:00'
+author: Sean Cuevo
+tags:
+- namespacing
+- namespace
+- visual force
+- bootstrap
+- sass
+- apex
+- salesforce
+modified_time: '2016-01-13T09:55:20.794-08:00'
+blogger_id: tag:blogger.com,1999:blog-4727318240760747618.post-5114581691520993719
+blogger_orig_url: http://www.socalledprogrammer.com/2016/01/getting-sassy-namespacing-bootstrap.html
+---
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>namespaceBootstrap</title>
+</head>
+
+<body>
+    <article class="markdown-body">
+        <p><a href="http://getbootstrap.com/">Bootstrap</a> is the most popular front-end web design framework and is usually my go to when I want to quickly create a user interface that is visually appealing and mobile friendly. I'll be the first to admit that I am not that great at design (just look at this blog!), so frameworks like Bootstrap are a godsend. Using Bootstrap with Salesforce (at least the classic view) can be a huge pain because of the conflicting stylesheets from the sidebar and header:</p>
+        <p>
+            <a href="https://camo.githubusercontent.com/cc733374ef2e5f8a4e82b8d6857b7d7c53ca91cd/687474703a2f2f692e696d6775722e636f6d2f4c3847497354792e706e67" target="_blank"><img src="https://camo.githubusercontent.com/cc733374ef2e5f8a4e82b8d6857b7d7c53ca91cd/687474703a2f2f692e696d6775722e636f6d2f4c3847497354792e706e67" alt="Conflicting Styles" data-canonical-src="http://i.imgur.com/L8GIsTy.png" style="max-width:100%;"></a>
+        </p>
+        <p>This isn't the case in Salesforce Lightning, but there are plenty of organizations that are not ready for the transition to the new interface. I knew that the answer to this problem was just to namespace the Bootstrap, but the execution involved running commands with Ruby, Sass, and Node, which for a while was just non-Salesforce magic that I dared not touch. For a few years I just avoided using Bootstrap in Salesforce, opting to just style everything myself. If you've ever felt this way, then this post is the hand holding you might be looking for.</p>
+        <h2><a id="user-content-tldr" class="anchor" href="#tldr" aria-hidden="true"><span class="octicon octicon-link"></span></a>TL;DR</h2>
+        <p>If you really don't want to do this, here's the namespaced CSS that you can just include in your project now: <a href="https://gist.github.com/seanpat09/6207236541d701da40ce">https://gist.github.com/seanpat09/6207236541d701da40ce</a></p>
+        <p>It doesn't include the glyphicon fonts, but pretty much everything else is there. </p>
+        <h2><a id="user-content-namespacing-bootstrap" class="anchor" href="#namespacing-bootstrap" aria-hidden="true"><span class="octicon octicon-link"></span></a>Namespacing Bootstrap</h2>
+        <p>(This is mainly for Mac users. Linux will largely be the same. Sorry Windows users)</p>
+        <p>Run all these commands in Terminal</p>
+        <h3><a id="user-content-install-the-dependencies-on-your-machine" class="anchor" href="#install-the-dependencies-on-your-machine" aria-hidden="true"><span class="octicon octicon-link"></span></a>Install the dependencies on your machine</h3>
+        <h4><a id="user-content-1-make-sure-you-have-ruby-installed" class="anchor" href="#1-make-sure-you-have-ruby-installed" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. Make sure you have Ruby installed</h4>
+        <p>Ruby comes pre-installed on Macs, but here's how you check for sure:</p> <pre><code>Your-Macintosh:~ seancuevo$ ruby -v<br />ruby 2.0.0p481 (2014-05-08 revision 45883) [universal.x86_64-darwin14]<br /></code></pre>
+        <p>If somehow you see something like this:</p> <pre><code>Your-Macintosh:~ seancuevo$ ruby -v<br />-bash: ruby: command not found<br /></code></pre>
+        <p>Then you need to install <a href="https://www.ruby-lang.org/en/documentation/installation/">Ruby</a></p>
+        <h4><a id="user-content-2-install-sass" class="anchor" href="#2-install-sass" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. Install <a href="http://sass-lang.com/install">Sass</a></h4> <pre><code>gem install sass<br /></code></pre>
+        <p>If you see any errors, trying running this:</p> <pre><code>sudo gem install sass<br /></code></pre>
+        <h4><a id="user-content-3-install-nvm" class="anchor" href="#3-install-nvm" aria-hidden="true"><span class="octicon octicon-link"></span></a>3. Install <a href="https://github.com/creationix/nvm">nvm</a></h4> <pre><code>curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.30.1/install.sh | bash<br /></code></pre>
+        <h4><a id="user-content-4-install-nodejs-using-nvm" class="anchor" href="#4-install-nodejs-using-nvm" aria-hidden="true"><span class="octicon octicon-link"></span></a>4. Install <a href="https://nodejs.org/en/">node.js</a> using nvm</h4> <pre><code>nvm install 5.0<br /></code></pre>
+        <p>You can use node in your terminal session with:</p> <pre><code>nvm use 5.0<br /></code></pre>
+        <p>You now have all the tools necessary to namespace Bootstrap!</p>
+        <h3><a id="user-content-compile-a-namespaced-version-of-bootstrap" class="anchor" href="#compile-a-namespaced-version-of-bootstrap" aria-hidden="true"><span class="octicon octicon-link"></span></a>Compile a namespaced version of Bootstrap</h3>
+        <p>You can run the following commands from whatever directory you want, but just make sure to stay in that directory as all the files will be written to the directory and all of the commands will be relative to it.</p>
+        <h4><a id="user-content-1-start-node" class="anchor" href="#1-start-node" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. Start node:</h4> <pre><code>nvm use 5.0<br /></code></pre>
+        <h4><a id="user-content-2-install-bootstrap-sass" class="anchor" href="#2-install-bootstrap-sass" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. Install Bootstrap-sass</h4> <pre><code>npm install bootstrap-sass<br /></code></pre>
+        <p>This creates a folder called <strong>node_modules</strong> in your current directory. This contains files necessary to compile bootstrap </p>
+        <h4><a id="user-content-3-create-the-scss-file" class="anchor" href="#3-create-the-scss-file" aria-hidden="true"><span class="octicon octicon-link"></span></a>3. Create the .scss file</h4>
+        <p>In the same directory, create a file called sfdcBootstrap.scss with the following contents</p> <pre><code>.sfdcBootstrap{<br />    $icon-font-path: "fonts/bootstrap/";<br />    @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";<br />}<br /></code></pre>
+        <p>This will create the bootstrap css file where only styles that descend from the .sfdcBootstrap class are affected by Bootstrap. You can name the class whatever you want, just make sure to change it in the .scss file.</p>
+        <h4><a id="user-content-4-compile-your-css-file-with-sass" class="anchor" href="#4-compile-your-css-file-with-sass" aria-hidden="true"><span class="octicon octicon-link"></span></a>4. Compile your css file with Sass</h4>
+        <p>In the same directory, run this command in Terminal:</p> <pre><code>sass sfdcBootstrap.scss sfdcBootstrap.css<br /></code></pre>
+        <p>You should now have a file called sfdcBootstrap.css in your directory.</p>
+        <h4><a id="user-content-5-build-your-static-resource" class="anchor" href="#5-build-your-static-resource" aria-hidden="true"><span class="octicon octicon-link"></span></a>5. Build your static resource</h4>
+        <p>Run this command to open your current directory in Finder:</p> <pre><code>open .<br /></code></pre>
+        <ul>
+            <li>In Finder, create another folder and put the sfdcBootstrap.css in it.</li>
+            <li>In the node_modules folder, navigate to bootstrap-sass &gt; assets.</li>
+            <li>Copy the fonts folder and place that in the same folder as sfdcBoostrap.css. </li>
+            <li>Select both sfdcBoostrap.css and the fonts folder, right click and select <strong>Compress 2 Items</strong></li>
+            <li>Rename the resulting archive file to <strong>sfdcBootstrap</strong> and upload to Salesforce as a static resource.</li>
+        </ul>
+        <h3><a id="user-content-use-your-namespaced-bootstrap-in-your-visual-force-page" class="anchor" href="#use-your-namespaced-bootstrap-in-your-visual-force-page" aria-hidden="true"><span class="octicon octicon-link"></span></a>Use your namespaced bootstrap in your Visual Force Page</h3>
+        <p>Here is a sample Visual Force page using the resource:</p> <pre><code>&lt;apex:page showHeader="true" sidebar="true"&gt;<br />    &lt;apex:stylesheet value="{!URLFOR($Resource.sfdcBootstrap, 'sfdcBootstrap.css')}" /&gt;<br />    &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"&gt;&lt;/script&gt;<br />    &lt;script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"&gt;&lt;/script&gt;<br />    &lt;div class="sfdcBootstrap"&gt;<br />      Formatted with bootstrap!<br />    &lt;/div<br />    Not formatted with bootstrap!<br />&lt;/apex:page&gt;<br /></code></pre>
+        <p>Everything outside of the sfdcBootstrap div (which includes the sidebar and header) will NOT be formatted with Bootstrap</p>
+        <p>
+            <a href="https://camo.githubusercontent.com/4ae723b59d62aa00f3eb25593195f8674f2e5317/687474703a2f2f692e696d6775722e636f6d2f62764c62366e302e706e67" target="_blank"><img src="https://camo.githubusercontent.com/4ae723b59d62aa00f3eb25593195f8674f2e5317/687474703a2f2f692e696d6775722e636f6d2f62764c62366e302e706e67" alt="Namespaced Bootstrap" data-canonical-src="http://i.imgur.com/bvLb6n0.png" style="max-width:100%;"></a>
+        </p>
+    </article>
+</body>
+
+</html>
