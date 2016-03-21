@@ -9,6 +9,11 @@
     // Positioning context for the mobile navigation icon
     position: relative;
 }
+@media (min-width: 48em) {
+  .site-header {
+    display:none;
+  }
+}
 
 .site-title {
     font-size: 26px;
@@ -160,6 +165,37 @@
         width: -webkit-calc(100% - (#{$spacing-unit} / 2));
         width:         calc(100% - (#{$spacing-unit} / 2));
     }
+}
+
+/**
+ * Sidebar
+ *
+ */
+.sidebar {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: rgba(255,255,255,.5);
+  background-color: #202020;
+}
+
+.sidebar, .sidebar h1{
+    font-size: 1.3rem;
+}
+
+@media (min-width: 48em) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 18rem;
+    text-align: left;
+  }
+}
+
+/* Sidebar links */
+.sidebar a {
+  color: #fff;
 }
 
 
