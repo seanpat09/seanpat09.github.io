@@ -178,8 +178,8 @@
   background-color: #202020;
 }
 
-.sidebar, .sidebar h1{
-    font-size: 1.3rem;
+.sidebar h1{
+    font-size: 1.2em;
 }
 
 @media (min-width: 48em) {
@@ -188,7 +188,7 @@
     top: 0;
     left: 0;
     bottom: 0;
-    width: 18rem;
+    width: 20%;
     text-align: left;
   }
 }
@@ -205,6 +205,13 @@
  */
 .page-content {
     padding: $spacing-unit 0;
+}
+
+@media (min-width: 48em) {
+    .page-content {
+        float: right;
+        width:75%;
+    }
 }
 
 .page-heading {
