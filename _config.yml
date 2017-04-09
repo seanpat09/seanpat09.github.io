@@ -16,4 +16,4 @@ twitter_username: squizzleflip
 github_username:  seanpat09
 
 # Build settings
-markdown: kramdown
+markdown: redcarpet
