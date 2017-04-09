@@ -1,7 +1,7 @@
 ---
 layout: post
-title: The Joys of Dependency Injection - Interfaces
-date: '2017-02-19T07:51:00.000-07:00'
+title: The Joys of Dependency Injection Part 1 - Interfaces
+date: '2017-04-08T07:51:00.000-07:00'
 author: Sean Cuevo
 tags: 
 tags:
@@ -9,7 +9,7 @@ tags:
 - tests
 - salesforce
 - dependency injection
-modified_time: '2017-02-19T07:51:00.000-07:00'
+modified_time: '2017-04-08T07:51:00.000-07:00'
 ---
 
 Dependency injection helps you make code that is easy to maintain and test by
