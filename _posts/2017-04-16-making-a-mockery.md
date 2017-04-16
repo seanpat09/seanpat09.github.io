@@ -1,7 +1,7 @@
 ---
 layout: post
 title: The Joys of Dependency Injection Part 2 - Making a Mockery
-date: '2017-04-08T08:51:00.000-07:00'
+date: '2017-04-16T08:51:00.000-07:00'
 author: Sean Cuevo
 tags: 
 tags:
@@ -9,7 +9,7 @@ tags:
 - tests
 - StubAPI
 - salesforce
-modified_time: '2017-04-08T08:51:00.000-07:00'
+modified_time: '2017-04-16T08:51:00.000-07:00'
 ---
 
 In my [last post](/2017/04/08/interfaces.html) I discussed interfaces and how they can be used for dependency injection in Salesforce, allowing for flexible implementations of features. However, I can probably count on my hand the number of times I've actually had to use interfaces for this purpose. Designing to an interface assumes you are able to predict if and how something will be reused or repurposed. Instead, interfaces are particularly useful for mocking functionality during unit tests.
@@ -70,7 +70,7 @@ private class AccountTriggerBeforeHandlerTest {
 }
 ```
 
-This test is so similar to the integration test that we might as well not have it all. But how else can we test it? That's where interfaces come. We'll create an interface for the AccountAssigner object, with a special method to replace or constructor.
+This test is so similar to the integration test that we might as well not have it all. But how else can we test it? That's where interfaces come. We'll create an interface for the AccountAssigner object, with a special method to replace the constructor.
 
 ```
 public class AccountAssigner implements IAccountAssigner{
