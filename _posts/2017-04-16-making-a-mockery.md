@@ -18,7 +18,7 @@ In my [last post](/2017/04/08/interfaces.html) I discussed interfaces and how th
 
 Most of the testing I see is integration testing, also known as black box testing. Trigger tests usually fall into this category: when I insert object X, I expect Y to happen. For example:
 
-```
+~~~
 trigger AccountTrigger on Account (before insert) {
     AccountTriggerBeforeInsertHandler.handle(Trigger.new);
 }
@@ -45,7 +45,7 @@ private class AccountTriggerTest {
         System.assertEquals( expectedAssignee.Id, newAccount.OwnerId, 'The Owner should be set correctly' );
     }
 }
-```
+~~~
 
 The test above tests that the before insert handler sets the Owner of an Account is set correctly. You could test other scenarios, but the minimum integration test here is that when you insert an Account, the Account gets assigned to someone. 
 
@@ -53,7 +53,7 @@ Unit tests, on the other hand, are a little more specific. What constitutes a un
 
 But what about the `handle` method in `AccountTriggerBeforeHandler`? The integration test that fires the trigger will give us the coverage we need, but shouldn't we test the handler itself? And what would that test even look like? Unit tests should test what the method does. At first glance it seems that `handle` assigns owners to Accounts records. However, the method actually just *calls* the `assignOwner` method, it doesn't actually do the assigning. So the test should make sure that our method does just that. For example:
 
-```
+~~~
 @isTest
 private class AccountTriggerBeforeHandlerTest {
     @isTest private void handle(){
@@ -68,11 +68,11 @@ private class AccountTriggerBeforeHandlerTest {
         System.assertEquals( expectedAssignee.Id, newAccount.OwnerId, 'The Owner should be set correctly' );
     }
 }
-```
+~~~
 
 This test is so similar to the integration test that we might as well not have it all. But how else can we test it? That's where interfaces come. We'll create an interface for the AccountAssigner object, with a special method to replace the constructor.
 
-```
+~~~
 public class AccountAssigner implements IAccountAssigner{
     
     public interface IAccountAssigner{
@@ -92,22 +92,22 @@ public class AccountAssigner implements IAccountAssigner{
         //logic for assigning an owner
     }
 }
-```
+~~~
 
 I usually keep the interface within the class; it reduces the number of files you have and it's only purpose is to mock this class. However, feel free to put it in another file you want. I also added a `construct` method that returns a mock if we want and only if it's a test. Now that we have an interface, instead of instantiating `AccountAssigner` in the `handle` method, we 'll use the new `construct` method, allowing us to inject our mock during tests:
 
-```
+~~~
 public class AccountTriggerBeforeHandler{
     public void handle( List<Account> accounts ){
         AccountAssigner.IAccountAssigner assigner = AccountAssigner.construct(); 
         assigner.assignOwner( accounts );
     }
 }
-```
+~~~
 
 We're now set up our to mock `AccountAssigner` in our test:
 
-```
+~~~
 @isTest
 private class AccountTriggerBeforeHandlerTest {
     public class MockAssigner implements AccountAssigner.IAccountAssigner{
@@ -130,7 +130,7 @@ private class AccountTriggerBeforeHandlerTest {
         System.assert( mock.assignOwnerCalled, 'The assignOwner method should have been called' );
     }
 }
-```
+~~~
 
 First we create `MockAssigner`, a class that implements the `IAccountAssigner` interface. All the mock will do is mark that the method has been called, which is all that we care about in this test. The test method will then instantiate a mock and inject it into the `mock` variable in `AccountAssigner`, which will then in turn be used by the `construct` method.
 
