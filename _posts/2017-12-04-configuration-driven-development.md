@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Configuration Driven Development
+date: '2017-12-04-T07:51:00.0
 author: Sean Cuevo
 tags:
 - salesforce
