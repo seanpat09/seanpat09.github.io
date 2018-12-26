@@ -15,6 +15,8 @@ When introducing people to Salesforce development, early on I usually hear somet
 
 > *I don't understand what's so special about Salesforce. It just seems like an expensive database with some minor drag and drop logic*
 
+<!--break-->
+
 I struggled with this idea for a long time. The slogan *Clicks not code* always irked me. At best it downplays the value of an engineer. At worst it was the cause of common anti-patterns as people would try to piece together a convoluted mixture of formulas and workflows when writing the same in Apex would be clearer and have the added benefit of being tested. In fact, when Process Builder was released, I took it as slight towards developers; they were actively working towards making developers obsolete as opposed to improving the tooling. And don't get me started on *Sassy*.
 
 ![report component](/assets/img/Saasy1.jpg)
@@ -32,5 +34,3 @@ But my mind kept going back to the reports. If I could just display the results 
 This was topic of my talk at Dreamforce '17, of which you can view the slides and audio recording in [this GitHub repo](github.com/seanpat09/dreamforce17).
 
 But after building this component, the real benefits of Salesforce to an engineer became clear to me. Aside from any technical bugs that appeared, I did not have to maintain this component. An admin could manage changes using the standard report builder and easily add new report components without any help from a developer. Instead of putting in hours maintaining slight changes, I could focus on enhancing functionality.
-
-In the upcoming weeks I'll be starting a new series of posts surrounding the idea of Configuration Driven Development in Salesforce. I'll focus on how you can start thinking with a configurable mindset, which pieces of Salesforce configuration are ripe for this style of development, and of course a series of code samples and working prototypes that you can start using! 

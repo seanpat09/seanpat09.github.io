@@ -3,7 +3,6 @@ layout: post
 title: The Joys of Dependency Injection Part 1 - Interfaces
 date: '2017-04-08T07:51:00.000-07:00'
 author: Sean Cuevo
-tags: 
 tags:
 - interface
 - tests

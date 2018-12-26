@@ -22,7 +22,10 @@ Back when I was doing Salesforce consulting, the first thing I would check in a 
     <li>Some kind of TestingUtils.cls with EVERYTHING related to creating test fixtures
         <br /> <pre><code class="prettyprint">  @isTest<br />  public class TestingUtils{<br />      public static List&lt;Account&gt; buildAccounts( Integer numOfAccounts ){<br />          List&lt;Account&gt; testAccounts = new List&lt;Account&gt;();<br />          for( Integer i = 0; i &lt; numOfAccounts; i++ ){<br />              testAccounts.add( new Account() );<br />          }<br />          return testAccounts;<br />      }<br /><br />      //700 lines later...<br /><br />      public static List&lt;Task&gt; buildTasks( Integer numOfTasks ){<br />          List&lt;Task&gt; testTasks = new List&lt;Task&gt;();<br />          for( Integer i = 0; i &lt; numOfTasks; i++ ){<br />              testTasks.add( new Task() );<br />          }<br />          return testTasks;<br />      }<br /></code></pre></li>
 </ul>These are both bad ideas because they create an unmaintainable mess (which I learned first hand by doing both).
-<br /><!--break-->
+<br />
+
+<!--break-->
+
 Test fixtures coded in the test will break the second you make a new required field, which will require you to find and fix every fixture.
 <br />The TestingUtils class at least keeps everything in one place, but it is rife with it's own issues:
 <br />

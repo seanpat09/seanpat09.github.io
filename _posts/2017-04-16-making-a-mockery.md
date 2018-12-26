@@ -3,7 +3,6 @@ layout: post
 title: The Joys of Dependency Injection Part 2 - Making a Mockery
 date: '2017-04-16T08:51:00.000-07:00'
 author: Sean Cuevo
-tags: 
 tags:
 - interface
 - tests
