@@ -5,7 +5,7 @@ body, h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, hr,
 dl, dd, ol, ul, figure {
     margin: 0;
-    padding: 0;
+    padding: 0;;
 }
 
 
@@ -81,17 +81,10 @@ li {
 /**
  * Headings
  */
-h1 {
-    font: $base-font-weight #{$base-font-size * 2}/#{$base-line-height} $title-font-family;
+h1, h2, h3, h4, h5, h6 {
+    font: $base-font-weight #{$base-font-size}/#{$base-line-height} $title-font-family;
     font-weight: $base-font-weight;
 }
-
-h2, h3, h4, h5, h6 {
-    font: $base-font-weight #{$base-font-size * 1.5}/#{$base-line-height} $title-font-family;
-    font-weight: $base-font-weight;
-}
-
-
 
 /**
  * Links
@@ -120,8 +113,8 @@ blockquote {
     border-left: 4px solid $grey-color-light;
     padding-left: $spacing-unit / 2;
     font-size: 18px;
-    letter-spacing: -1px;
     font-style: italic;
+    margin: $spacing-unit 0 $spacing-unit 0;
 
     > :last-child {
         margin-bottom: 0;

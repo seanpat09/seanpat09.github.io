@@ -260,6 +260,7 @@
     margin-bottom: $spacing-unit;
 
     h2 {
+        margin-top: $spacing-unit*1.5;
         font-size: 32px;
 
         @include media-query($on-laptop) {
