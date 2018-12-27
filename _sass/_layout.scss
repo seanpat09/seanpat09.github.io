@@ -247,13 +247,15 @@
 }
 
 .post-title {
-    font-size: 50px;
+    font-size: 30px;
     letter-spacing: -1px;
     line-height: 1;
 
     @include media-query($on-laptop) {
         font-size: 50px;
     }
+
+    
 }
 
 .post-content {
@@ -261,10 +263,14 @@
 
     h2 {
         margin-top: $spacing-unit*1.5;
-        font-size: 36px;
+        font-size: 24px;
 
         @include media-query($on-laptop) {
-            font-size: 28px;
+            font-size: 36px;
+        }
+        
+        @include media-query($on-palm) {
+            font-size: 24px;
         }
     }
 
@@ -281,6 +287,12 @@
 
         @include media-query($on-laptop) {
             font-size: 18px;
+        }
+    }
+
+    p, li {
+        @include media-query($on-palm) {
+            font-size: 14px;
         }
     }
 }

@@ -39,10 +39,13 @@ Something I have built over and over again is a mechanism to input multiple line
 And get this:
 ![dynamic table screenshot](/assets/img/DynamicTable.PNG)
 
-For those of you playing along at home, here are instructions to setup working with LWC (as of today, it is only available in Spring '19 pre-release orgs), documentation on building with LWC, and the GitHub repo with the finished code for this project
-* <https://trailhead.salesforce.com/en/content/learn/projects/quick-start-lightning-web-components>
-* <https://developer.salesforce.com/docs/component-library/documentation/lwc>
-* <https://github.com/seanpat09/dynamicFieldsLWC>
+For those of you playing along at home, here are some resources to help you get started:
+
+[Quick Start: Lightning Web Components](https://trailhead.salesforce.com/en/content/learn/projects/quick-start-lightning-web-components)
+
+[LWC Documentation](https://developer.salesforce.com/docs/component-library/documentation/lwc)
+
+[GitHub repo with project code](https://github.com/seanpat09/dynamicFieldsLWC)
 
 ## Lesson #1: Naming Matters
 
