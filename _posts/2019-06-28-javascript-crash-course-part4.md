@@ -3,6 +3,7 @@ layout: post
 title: A JavaScript Crash Course from a Apex Dev's Point of View - Part 4
 date: '2019-06-28-T00:00:00.000-07:00'
 author: Sean Cuevo
+description: Learn the debugging differences between Apex and JavaScript, and how it can change your thoughts on how to debug your code.
 tags:
 - salesforce
 - lwc
