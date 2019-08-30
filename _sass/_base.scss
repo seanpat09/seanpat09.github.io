@@ -52,12 +52,18 @@ img {
 /**
  * Figures
  */
+figure {
+    text-align: center;
+}
+
 figure > img {
     display: block;
+    margin: auto;
 }
 
 figcaption {
     font-size: $small-font-size;
+    font-style: italic;
 }
 
 
