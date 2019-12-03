@@ -1,7 +1,7 @@
 ---
 layout: post
 title: So-Called Advent Calendar Day 2 - Tabs vs. Spaces
-date: '2019-12-01-T00:00:00.000-07:00'
+date: '2019-12-02-T00:00:00.000-07:00'
 author: Sean Cuevo
 description: I can't settle the debate here, but it does actually matter
 tags:
