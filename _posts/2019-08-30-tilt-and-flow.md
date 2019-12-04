@@ -12,7 +12,7 @@ tags:
 In the book *Flow* by Mihaly Csikszentmihalyi (pronounced "Me-high Cheek-sent-me-high"), the author dives into the joy we find from achieving "flow" while engaging in an activity. I think this is one of the main reasons why coding is so satisfying: we can dive into creative, puzzle-like tasks that we can solve in small chunks while getting immediate feedback on the results. And as we get better at programming you start to see your own progress. 
 
 <figure>
-  <img src="{{site.url}}/assets/img/universe.jpg" alt="Picture of person looking at stars"/>
+  <img src="{{site.url}}/assets/img/universe2.jpg" alt="Picture of person looking at stars"/>
   <figcaption>Behold! I am one with the universe! This problem that used to take me 3 hours to figure out now only takes 2.</figcaption>
 </figure>
 
@@ -25,7 +25,7 @@ A few days ago I found this happening to me. I had very few meetings so I could 
 4 hours later I had made no progress out what was wrong. I was enraged and angry thoughts filled me head.
 
 <figure>
-  <img src="{{site.url}}/assets/img/angry-ferret.jpg" alt="Picture of an angry ferret"/>
+  <img src="{{site.url}}/assets/img/angry-ferret2.jpg" alt="Picture of an angry ferret"/>
   <figcaption>This application is dumb. This job is dumb. I hate programming and I hate you.</figcaption>
 </figure>
 
