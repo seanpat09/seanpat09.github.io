@@ -1,11 +1,13 @@
 ---
 layout: post
-title: So-Called Advent Calendar Day 6 - Creating A Remote Environment
-date: '2019-12-06-T00:00:00.000-07:00'
+title: So-Called Advent Calendar Day 7 - Ranked fruits in a fruit salad
+date: '2019-12-07-T00:00:00.000-07:00'
 author: Sean Cuevo
 description: We rank the fruits in a fruit salad
 tags:
-- remote work
+- fruit salad
+- work fun
+- lists
 ---
 
 *In the spirit of the holiday season, this is a series of short blog posts covering random things I have learned while doing Salesforce development, one for each day of Advent.*
