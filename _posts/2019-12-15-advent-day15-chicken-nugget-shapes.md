@@ -6,10 +6,9 @@ author: Sean Cuevo
 description: Today we rank the McNuggets
 
 tags:
-- planning
-- salesforce
-- estimation
-- agile 
+- fun
+- food
+- mcnuggets
 ---
 
 *In the spirit of the holiday season, this is a series of short blog posts covering random things I have learned while doing Salesforce development, one for each day of Advent.*
