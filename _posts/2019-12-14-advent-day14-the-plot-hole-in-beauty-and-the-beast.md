@@ -29,7 +29,7 @@ But during *Be Our Guest* Lumiere let's us know how long they have been cursed:
 
 So an 11 year old child was transformed into a beast for not letting some random stranger into his house in the middle of the night? If I don't recognize you or you are not coming out of a delivery truck, I am not answering the door even if it's the middle of the day! Seems a little unfair.
 
-The live action remake tries to remedy this by making the prince an adult before he is transfored and changing the lyric in *Be Our Guest* to "*Too long* we've been rusting," which makes me think that Disney realizes the ridiculousness of this idea.
+The live action remake tries to remedy this by making the prince an adult before he is transformed and changing the lyric in *Be Our Guest* to "*Too long* we've been rusting," which makes me think that Disney realizes the ridiculousness of this idea.
 
 But recently I saw a clip from *Beauty and the Beast: The Enchanted Christmas* in which we get to see the scene where Prince Adam transforms (yeah that's his name! Stop calling him "beast", Belle. That's really rude).
 
@@ -39,7 +39,7 @@ Ok, the Prince is a real asshole, maybe he did deserve this curse. But if we con
 
 Since he was transformed into an inorganic teacup, did he not get to age? Is he now a 14 year old trapped in the body of a 4 year old? He's may still act like a child, but he also has 10 additional years of experience.
 
-Also why did the witch transform the children and the dog? What the hell did he do wrong? Even the argument that the staff let Prince Adam get spoiled doesn't hold much weight - he's their employer and his title implies he is also has power of their lives. Come on now.
+Also why did the witch transform the children and the dog? What the hell did they do wrong? Even the argument that the staff let Prince Adam get spoiled doesn't hold much weight - he's their employer and his title implies he is also has power of their lives. Come on now.
 
 Speaking of the children, who are all these children in the cupboard?
 
