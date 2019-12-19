@@ -1,6 +1,6 @@
 ---
 layout: post
-title: So-Called Advent Calendar Day 17 - Fire Drills - You have to slow down to speed up
+title: So-Called Advent Calendar Day 18 - Fire Drills - You have to slow down to speed up
 date: '2019-12-18-T00:00:00.000-07:00'
 author: Sean Cuevo
 description: When you hit a P0 issue, you have to slow down first to quickly deliver
