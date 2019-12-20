@@ -6,9 +6,9 @@ author: Sean Cuevo
 description: WhatsThis.js (to the tune of 'What's This?' From The Nightmare Before Christmas)
 
 tags:
-- salesforce
-- agile
-- bug fixes
+- fun
+- music
+- JavaScript
 ---
 
 *In the spirit of the holiday season, this is a series of short blog posts covering random things I have learned while doing Salesforce development, one for each day of Advent.*
