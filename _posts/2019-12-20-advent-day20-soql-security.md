@@ -1,14 +1,14 @@
 ---
 layout: post
-title: So-Called Advent Calendar Day 20 - Securing You SOQL
+title: So-Called Advent Calendar Day 20 - Securing Your SOQL
 date: '2019-12-20-T00:00:00.000-07:00'
 author: Sean Cuevo
 description: New ways to secure your SOQL
 
 tags:
-- fun
-- music
-- JavaScript
+- soql
+- apex
+- security
 ---
 
 *In the spirit of the holiday season, this is a series of short blog posts covering random things I have learned while doing Salesforce development, one for each day of Advent.*
