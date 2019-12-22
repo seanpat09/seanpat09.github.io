@@ -1,7 +1,7 @@
 ---
 layout: post
 title: So-Called Advent Calendar Day 21 - What we can learn about Imposter Syndrome from Chicken Boo
-date: '2019-12-21-T00:00:00.000-07:00'
+date: '2019-12-22-T00:00:00.000-07:00'
 author: Sean Cuevo
 description: You wear a disguise to look like human guys, but you're not man, you're a Chicken Boo
 
