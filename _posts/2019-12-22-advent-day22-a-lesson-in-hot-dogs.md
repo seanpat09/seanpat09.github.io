@@ -1,7 +1,7 @@
 ---
 layout: post
 title: So-Called Advent Calendar Day 22 - A Lesson In Hot Dogs
-date: '2019-12-21-T00:00:00.000-07:00'
+date: '2019-12-22-T00:00:00.000-07:00'
 author: Sean Cuevo
 description: Exploring hot dogs place in sandwich lore
 
