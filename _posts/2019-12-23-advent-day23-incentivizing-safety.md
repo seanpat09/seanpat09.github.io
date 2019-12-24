@@ -1,6 +1,6 @@
 ---
 layout: post
-title: So-Called Advent Calendar Day 23 - Incentive a Safe Work Place
+title: So-Called Advent Calendar Day 23 - Incentivize a Safe Work Place
 date: '2019-12-23-T00:00:00.000-07:00'
 author: Sean Cuevo
 description: When your team does not feel safe, it will not last long
