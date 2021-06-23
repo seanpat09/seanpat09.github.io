@@ -101,7 +101,7 @@ After I ran that, on my parent account record that I had put my docx attachment,
   <img src="{{site.url}}/assets/img/apex-doc-gen-hulk.jpg" alt="Hulk saying 'Native Apex document generation"/>
 </figure>
 
-With a proof of concept I reworked the code a little bit so that it's a little more reusable. Here's the result repo: https://github.com/seanpat09/docx-merger
+With a proof of concept I reworked the code a little bit so that it's a little more reusable. [Click here for the github repo]( https://github.com/seanpat09/docx-merger).
 
 With that code you can do something like this to generate documents with merge fields:
 
