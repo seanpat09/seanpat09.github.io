@@ -1,6 +1,17 @@
 ---
 layout: default
 ---
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@squizzleflip" />
+<meta name="twitter:title" content="{{page.title}}" />
+{% if page.description %}
+<meta name="twitter:description" content="{{page.description}}" />
+{% endif %}
+
+{% if page.image %}
+<meta name="twitter:image" content="{{site.url}}{{page.image}}" />
+{% endif %}
+
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">

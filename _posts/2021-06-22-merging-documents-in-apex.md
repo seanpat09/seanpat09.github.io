@@ -4,6 +4,7 @@ title: Merging DOCX files natively in Apex.
 date: '2021-06-22-T00:00:00.000-07:00'
 author: Sean Cuevo
 description: Populating merge fields on a Word doc can be done with just Apex
+image: /assets/img/merge-fields.png
 
 tags:
 - document generation
