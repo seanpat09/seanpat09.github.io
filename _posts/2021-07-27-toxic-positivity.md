@@ -4,6 +4,7 @@ title: Toxic Positivity - It's OK to Not Be OK
 date: '2021-07-27-T00:00:00.000-07:00'
 author: Sean Cuevo
 description: Everything in moderation, including a positive attitude.
+image: /assets/img/toxic-positivity.jpg
 
 tags:
 - work life balance
