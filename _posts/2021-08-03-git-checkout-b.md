@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Good morning, and in case I don't see ya: Good afternoon, good evening, and good night!"
-date: '2021-08-05-T00:00:00.000-07:00'
+date: '2021-08-03-T00:00:00.000-07:00'
 author: Sean Cuevo
 description: Everything in moderation, including a positive attitude.
 image: /assets/img/sailboat.jpg
