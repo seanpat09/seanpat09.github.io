@@ -4,7 +4,7 @@ title: "Can we trick salesforce into doing reportable dynamic rollups?"
 date: "2022-05-23-T00:00:00.000-08:00"
 author: Sean Cuevo
 description: Misusing External Objects to Do Dynamic Rollup Summaries
-image: /assets/img/building-blocks.jpg
+image: /assets/img/rollup-summary-report.png
 
 tags:
   - rollup-summary
