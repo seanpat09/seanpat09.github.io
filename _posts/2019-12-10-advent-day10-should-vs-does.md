@@ -13,11 +13,6 @@ tags:
 
 *In the spirit of the holiday season, this is a series of short blog posts covering random things I have learned while doing Salesforce development, one for each day of Advent.*
 
-<figure>
-  <img src="{{site.url}}/assets/img/map.jpg" alt="Navigating a nap"/>
-  <figcaption>When navigating a product, you need more than just the code</figcaption>
-</figure>
-
 I have worked in numerous Salesforce orgs and whenever I walk into a new org, I try to make an effort to audit the code to get a feel for the product. I figure, the application can only do what the code tells it to do, so the code is ultimate source of truth of the application's functionality, right?
 
 Technically that's true, but just because an application functions a certain way doesn't mean it *should* function that way. If it did, then there would never be any bugs! Let's take an example of a piece of code that calculates some tax:

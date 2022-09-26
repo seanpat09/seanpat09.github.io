@@ -14,11 +14,6 @@ tags:
 
 *In the spirit of the holiday season, this is a series of short blog posts covering random things I have learned while doing Salesforce development, one for each day of Advent.*
 
-<figure>
-  <img src="{{site.url}}/assets/img/auto-toys.jpg" alt="Toy cars and busses"/>
-  <figcaption>How many people would it take to lift a school bus?</figcaption>
-</figure>
-
 I remember in science class we would do these things called Fermi Problems. Basically questions with numerical answers that required quick estimation and no time to do any research. For example:
 
 > How many people would it take to lift a school bus?

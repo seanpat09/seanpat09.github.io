@@ -12,11 +12,6 @@ tags:
 
 *In the spirit of the holiday season, this is a series of short blog posts covering random things I have learned while doing Salesforce development, one for each day of Advent.*
 
-<figure>
-  <img src="{{site.url}}/assets/img/difficult-roads3.jpg" alt="Difficult roads lead to beautiful destinations"/>
-  <figcaption>Where we can go depends on where we have been, good and bad</figcaption>
-</figure>
-
 Retro is one of my favorite scrum ceremonies and I think it is the most important one. Without taking the time to reflect and celebrate what we have done, we cannot possibly set ourselves up for a better future. On my current team, we start with the Retro Prime Directive:
 
 > ~~The Prime Directive prohibits Starfleet personnel and spacecraft from interfering in the normal development of any society, and mandates that any Starfleet vessel or crew member is expendable to prevent violation of this rule~~

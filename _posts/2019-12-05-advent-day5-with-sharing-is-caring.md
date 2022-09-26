@@ -12,11 +12,6 @@ tags:
 
 *In the spirit of the holiday season, this is a series of short blog posts covering random things I have learned while doing Salesforce development, one for each day of Advent.*
 
-<figure>
-  <img src="{{site.url}}/assets/img/chained-book4.jpg" alt="A picture of a book wrapped in chains"/>
-  <figcaption>Are you sure you understand how security is enforced in Apex?</figcaption>
-</figure>
-
 For a long time, I was under the impression that creating an Apex class with the `with sharing` declaration was enough to enforce not just sharing rules, but also field level security (i.e. FLS) and CRUD access on objects. This was (mistakenly) reinforced by the fact that if I was trying to edit a record in a Visualforce page and couldn't, then running the class `without sharing` usually "fixed" that. But that wasn't because my user didn't have the correct CRUD access on said record, it was because they didn't haven't the correct sharing access to edit *that particular record*.
 
 I've worked in a lot of Salesforce orgs where record access wasn't kept really private - basically everyone was a step down from being a system admin. All records were accessible, everyone had the ability to read or edit any field. And so for an embarassingly long time I didn't actually need to worry about how security worked. As long as record access was kept behind a login into their Salesforce org, the client often thought that was secure enough (for better or worse).

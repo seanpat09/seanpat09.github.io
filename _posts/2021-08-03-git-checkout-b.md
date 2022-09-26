@@ -10,13 +10,6 @@ tags:
 - work life balance
 ---
 
-<figure>
-  <img src="{{site.url}}/assets/img/sailboat.jpg" alt="Sailboat in a lone sea"/>
-  <figcaption>
-    Photo by <a href="https://unsplash.com/@joshsorenson?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Josh Sorenson</a> on <a href="https://unsplash.com/s/photos/sailboat?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-  </figcaption>
-</figure>
-
 Throughout my career I have joined and left several organizations, all for different reasons, and I have always felt confident in my choice to move on. For the first time, however, I am as equally excited in my next role as I am saddened to leave my previous one. Later this month, I will be joining the team at Twitch, leaving my current role at Salesforce.
 
 I cannot express enough how lucky I was to be able to work with the people that I did at Salesforce. These were some of the most capable individuals I have ever worked with, and I found myself continually impressed by everyone. The way I was able to thrive, grow, and learn was phenomenal. Not just in the technical skills that I have gained, but also the numerous lessons I have learned in what we typically call "soft" skills. Lessons on how to lead and be a part of phenomenal teams, how to work productively and, more importantly, sustainably. What it means to work together with compassion and empathy. And what it truly means to work in a way that benefits not just the company, but myself.

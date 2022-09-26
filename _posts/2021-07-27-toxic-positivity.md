@@ -10,13 +10,6 @@ tags:
 - work life balance
 ---
 
-<figure>
-  <img src="{{site.url}}/assets/img/toxic-positivity.jpg" alt="Sign that says Be Happy"/>
-  <figcaption>
-    Photo by <a href="https://unsplash.com/@alexblock?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Alex Block</a> on <a href="https://unsplash.com/s/photos/positive?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-  </figcaption>
-</figure>
-
 A friend recently introduced me to the idea of "toxic positivity", which can be summarized as the "everything is awesome!" approach to life. I can't speak to other industries, but I see this attitude all too often in tech. While I believe we should encourage some level of positive thinking, when we don't allow ourselves the space for our pain, for our grief, we tip the balance into toxicity.
 
 ## It's not me, it's you

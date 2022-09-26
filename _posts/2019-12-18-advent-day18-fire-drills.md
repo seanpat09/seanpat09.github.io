@@ -13,11 +13,6 @@ tags:
 
 *In the spirit of the holiday season, this is a series of short blog posts covering random things I have learned while doing Salesforce development, one for each day of Advent.*
 
-<figure>
-  <img src="{{site.url}}/assets/img/hydrant.jpg" alt="fire hydrant"/>
-  <figcaption>Rushing into a problem generally doesn't help</figcaption>
-</figure>
-
 We have all been there before. You get the message on Slack, a panicked chat message. The dreaded P0 issue. Something is broken and we have to fix it NOW.
 
 Generally my first instinct is to dive into the code and figure out what's wrong. Churn out the code, get it tested, merge it into master, and get it pushed to production as soon as possible. Deployments in Salesforce can take up to an hour in some of the orgs I have worked in, so we need to move quickly!

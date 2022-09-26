@@ -10,13 +10,6 @@ tags:
 - work life balance
 ---
 
-<figure>
-  <img src="{{site.url}}/assets/img/john-schnobrich-FlPc9_VocJ4-unsplash.jpg" alt="Hands pointing at laptop screen"/>
-  <figcaption>
-Photo by <a href="https://unsplash.com/@johnschno?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">John Schnobrich</a> on <a href="https://unsplash.com/s/photos/review?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-  </figcaption>
-</figure>
-
 ## Separation of Duties
 
 Before I became a software engineer, I studied accounting and even worked as an auditor for a brief period. Not much accounting knowledge remains, but a few nuggets stayed with me, particularly the internal control known as "Separation of Duties" (not to be confused with the design principle "Separation of Concerns"). To summarize, no one person should have complete control over an entire transaction. For example, the person collecting cash from a customer for a bill should not be the one to also record the transaction and deposit the cash. Otherwise, that person could collect funds, credit the customer's account, and take a little off the top before making the bank deposit. Having another person in this process does not eliminate the risk, but colluding with someone else is harder to hide. You know what they say about the only way for two people keep a secret.

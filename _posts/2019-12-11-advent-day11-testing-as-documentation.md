@@ -13,11 +13,6 @@ tags:
 
 *In the spirit of the holiday season, this is a series of short blog posts covering random things I have learned while doing Salesforce development, one for each day of Advent.*
 
-<figure>
-  <img src="{{site.url}}/assets/img/test-automation.jpg" alt="Machine running automated tests"/>
-  <figcaption>Automated tests are a great way to document expected behavior</figcaption>
-</figure>
-
 Yesterday we talked about documenting your application's functionality outside of your code. But someone pointed out to me that your automated tests are also a form of documentation. Your automated test suite, whether it is Apex tests, LWC Jest Tests, or something like Seleniun, should not just test that the code runs but also validate the expected behavior. And a robust test suite should clearly describe those test scenarios.
 
 I really like the format Jest uses when testing LWC. The describe blocks give you the freedom to describe each scenario clearly and the expected behavior within each scenario:

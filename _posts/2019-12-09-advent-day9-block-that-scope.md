@@ -14,11 +14,6 @@ tags:
 
 *In the spirit of the holiday season, this is a series of short blog posts covering random things I have learned while doing Salesforce development, one for each day of Advent.*
 
-<figure>
-  <img src="{{site.url}}/assets/img/code-vision.jpg" alt="Batman vs. Superman"/>
-  <figcaption>Use blocks to control what your code can see</figcaption>
-</figure>
-
 When it comes to writing code, *scope* is used to describe how visible a piece of code is to the rest of your code. For example, if a variable is in scope, then it can be referenced. An easy way to define a scope is within curly braces. In Apex, I generally see curly braces used in a few contexts:
 
 **To define methods and classes**

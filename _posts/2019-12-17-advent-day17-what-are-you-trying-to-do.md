@@ -12,11 +12,6 @@ tags:
 
 *In the spirit of the holiday season, this is a series of short blog posts covering random things I have learned while doing Salesforce development, one for each day of Advent.*
 
-<figure>
-  <img src="{{site.url}}/assets/img/collab.jpg" alt="collaboration"/>
-  <figcaption>How you ask about the root problem is just as important as getting to it</figcaption>
-</figure>
-
 When I worked in the industry side, maintaining and implementing a company's Salesforce instance, I would get a lot of requests directly from end users. They would generally be sales team members, or people in operations. Can you add this field? Can you add a picklist value? Things like that. When I first started my career, I would just do it. After all, it only took a few minutes and look at my turn around time! Quickly I learned that's how nightmare orgs are created, so in attempt to think more long term I started first asking:
 
 > What are you trying to do?

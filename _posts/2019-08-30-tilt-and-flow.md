@@ -11,11 +11,6 @@ tags:
 
 In the book *Flow* by Mihaly Csikszentmihalyi (pronounced "Me-high Cheek-sent-me-high"), the author dives into the joy we find from achieving "flow" while engaging in an activity. I think this is one of the main reasons why coding is so satisfying: we can dive into creative, puzzle-like tasks that we can solve in small chunks while getting immediate feedback on the results. And as we get better at programming you start to see your own progress. 
 
-<figure>
-  <img src="{{site.url}}/assets/img/universe2.jpg" alt="Picture of person looking at stars"/>
-  <figcaption>Behold! I am one with the universe! This problem that used to take me 3 hours to figure out now only takes 2.</figcaption>
-</figure>
-
 This feedback loop can be addicting. Have you ever been grinding through work items and suddenly find that the sun has gone down? Ever thought to yourself "Maybe just one more ticket, I'm on a roll here," even though the office has closed an hour ago? That's the joy of flow. And largely, it's a good thing. It is such a gift to be paid to do something that can bring you such satisfaction.
 
 But when you hit a roadblock, your flow state starts to go away. And not unlike a drug addiction, you may find that your mind and body begins to spiral as you try to chase that high.
