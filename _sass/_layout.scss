@@ -222,10 +222,4 @@ h1.title-header {
             font-size: 18px;
         }
     }
-
-    p, li {
-        @include media-query($on-palm) {
-            font-size: 14px;
-        }
-    }
 }
