@@ -6,12 +6,13 @@
 
 
 // Our variables
-$title-font-family: "Oswald", Helvetica, Arial, sans-serif;
-$base-font-family: "Roboto Slab", Times, serif;
+$title-font-family: Arial, sans-serif;
+$base-font-family: Times, serif;
 $base-font-size:   20px;
 $base-font-weight: 500;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.8;
+$title-line-height: 1.2;
 
 $spacing-unit:     40px;
 
@@ -31,13 +32,6 @@ $on-laptop:        1000px;
 
 
 
-// Use media queries like this:
-// @include media-query($on-palm) {
-//     .wrapper {
-//         padding-right: $spacing-unit / 2;
-//         padding-left: $spacing-unit / 2;
-//     }
-// }
 @mixin media-query($device) {
     @media screen and (max-width: $device) {
         @content;
@@ -49,8 +43,7 @@ $on-laptop:        1000px;
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
         "base",
-        "layout",
-        "syntax-highlighting"
+        "layout"
 ;
 
 .PageNavigation {

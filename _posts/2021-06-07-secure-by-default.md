@@ -10,11 +10,6 @@ tags:
 - apex
 ---
 
-<figure>
-  <img src="{{site.url}}/assets/img/matthew-henry-fPxOowbR6ls-unsplash.jpg" alt="Picture of people looking at dozens of security cameras mounted on a wall"/>
-  <figcaption>Photo by <a href="https://unsplash.com/@matthewhenry?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Matthew Henry</a> on <a href="https://unsplash.com/s/photos/security?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></figcaption>
-</figure>
-
 Far too often I see code where security is treated more like a checkbox instead of as part of the architecture of the product. As long as my Apex classes are running `with sharing` and I enforce FLS/CRUD access in my SOQL queries and DML statements, my code is secure, right? Technically that's true, but as is always the case, it really depends on the context.
 
 ## Tell me if you heard this one before

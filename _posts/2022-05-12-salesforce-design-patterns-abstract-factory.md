@@ -14,13 +14,6 @@ tags:
 
 *Design patterns are powerful tool to build reusuable code, but they are hard to implement in without examples and use cases. This is a series that follows the book Design Patterns: Elements of Resuable Object-Oriented Software a provides examples that relate to Salesforce*
 
-<figure>
-  <img src="{{site.url}}/assets/img/building-blocks.jpg" alt=""/>
-  <figcaption>
-    Photo by <a href="https://unsplash.com/@ryanquintal?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Ryan Quintal</a> on <a href="https://unsplash.com/s/photos/building-blocks?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a>
-  </figcaption>
-</figure>
-
 ## Abstract Factory
 
 The Abstract Factory design pattern is useful for creating related objects that follow an interface. I find this pattern particularly useful for building resuable Lightning Web Components. Let's use this pattern to build a resuable custom related list.

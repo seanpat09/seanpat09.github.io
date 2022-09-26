@@ -14,11 +14,6 @@ tags:
 
 *In the spirit of the holiday season, this is a series of short blog posts covering random things I have learned while doing Salesforce development, one for each day of Advent.*
 
-<figure>
-  <img src="{{site.url}}/assets/img/flow-diagram.jpg" alt="Drawing out a flow chart"/>
-  <figcaption>Turning a flow chart into code gets tricky when you need flexibility</figcaption>
-</figure>
-
 Throughout my career I have built many MVPs that have never gone anywhere. Some of them turned out to not be as useful as we originally anticipated, but there are a select few that I think really had something to them. Either I left the company or shifting priorities prevented us from starting on the next iteration. One such product is The Rules Engine.
 
 One of my favorite declarative features in Salesforce are Workflow Rules. Being able to define actions that run based on criteria without having to write a single line of code can be really useful, especially when that criteria isn't set in stone. This lets you respond to changes quickly with some level of confidence without having to test the underlying workflow engine every time criteria is a changed. (There is some debate to be had about how much you should test a workflow rule itself, but that's for another time).

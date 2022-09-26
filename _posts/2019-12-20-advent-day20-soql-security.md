@@ -13,11 +13,6 @@ tags:
 
 *In the spirit of the holiday season, this is a series of short blog posts covering random things I have learned while doing Salesforce development, one for each day of Advent.*
 
-<figure>
-  <img src="{{site.url}}/assets/img/soql-security.jpg" alt="clicking on the word security"/>
-  <figcaption>Just click the secure button and we should be secure</figcaption>
-</figure>
-
 A common misconception I have heard is that using `with sharing` when declaring an Apex class enforces security in your code. However, that only enforces sharing rules, i.e. it prevents the running user from querying and updating records that they do not have sharing access.
 
 It DOES NOT enforce FLS. Even if the running user does not have read/edit access to a field on an sObject, when that field is queried in Apex, that field will be populated. Using `<apex:outputField>` in Visualforce will prevent the user from seeing the value, but the value is still fetched in apex.

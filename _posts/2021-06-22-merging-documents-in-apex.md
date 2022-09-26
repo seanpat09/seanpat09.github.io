@@ -11,10 +11,6 @@ tags:
 - apex
 ---
 
-<figure>
-  <img src="{{site.url}}/assets/img/merge-fields.png" alt="HTML code showing merge field syntax"/>
-</figure>
-
 When it comes to document generation in native Salesforce, I always assumed that your only options were something really simple like using [Blob.toPDF](https://developer.salesforce.com/docs/atlas.en-us.apexref.meta/apexref/apex_methods_system_blob.htm) or rendering a Visualforce page as a PDF and saving it as a file. Neither of there were very pragmatic - the Blob method left much to be desired in terms of formatting and the Visualforce approach was too hard to maintain. As such, when someone would ask for document generation I would just point them to an ISV like Conga or Drawloop. Surely working with a Word document wouldn't be possible in Apex, right?
 
 ## The DOCX file format.

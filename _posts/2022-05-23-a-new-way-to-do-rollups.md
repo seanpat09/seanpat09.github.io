@@ -11,13 +11,6 @@ tags:
   - apex
 ---
 
-<figure>
-  <img src="{{site.url}}/assets/img/rollup-summary-report.png" alt=""/>
-  <figcaption>
-    Make reportable rollup summaries by "misusing" the apex connector framework.
-  </figcaption>
-</figure>
-
 ## Rollups. Why is it always rollups.
 
 I hate rollups. I hate building them. I hate how they slow down things in Salesforce. I hate how they can accidentally block users from editing records. And I especially hate debugging them. "Why is this roll up field wrong?" I don't know, there are so many points of failure when it comes to a roll up. Maybe the job hasn't run yet and someone just added another record. Maybe an error was thrown and a record wasn't accounted for. But sure, I'll throw away a few hours to answer your question and by the time I have an answer the rollup corrected itself. I digress.

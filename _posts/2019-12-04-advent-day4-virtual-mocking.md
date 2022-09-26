@@ -12,11 +12,6 @@ tags:
 
 *In the spirit of the holiday season, this is a series of short blog posts covering random things I have learned while doing Salesforce development, one for each day of Advent.*
 
-<figure>
-  <img src="{{site.url}}/assets/img/findTheThing.png" alt="Code for a virtual class"/>
-  <figcaption>When you need to mock something within a class, think virtually!</figcaption>
-</figure>
-
 When writing unit tests, I try to avoid doing anything that would hit the database, like creating records, or running SOQL queries. Inserting records in tests not only slow tests down, but they also inadvertently create a dependency between your test class and any triggers in your organization. Or in the case of BigObjects, you just can't insert recors because they'll persist in your org even after the test is done (we'll discuss this on another day!). While you will want a larger integration test that actually hits the database to test things from end to end, generally your unit tests are more focused and are also more in number. So even if just for the sake of speed, I try to think if I can write unit tests without any DML at all.
 
 This becomes especially tricky if the method you are testing has any SOQL queries in it. While using dependency injection or the StubAPI can be useful to mock out services that do DML, sometimes it's a bit too much to create a separate dependency for your method. Consider the following that queries some objects and returns the first one to match some criteria: 

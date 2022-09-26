@@ -12,11 +12,6 @@ tags:
 
 *In the spirit of the holiday season, this is a series of short blog posts covering random things I have learned while doing Salesforce development, one for each day of Advent.*
 
-<figure>
-  <img src="{{site.url}}/assets/img/safety.jpg" alt="crosswalk signal"/>
-  <figcaption>When your team does not feel safe to proceed, it will not last long</figcaption>
-</figure>
-
 A few days ago I watched a video a colleague shared with our team called "The four components of high performing teams." The speaker presents the four components along with some stories from her professional experiences to add some context. Here is the description of the the four components from the video:
 
 >* Mastery - The skills & knowledge needed to do a great job, and a clear path to get to the next level.
