@@ -5,14 +5,9 @@
     <h2 class="footer-heading">{{ site.title }}</h2>
 
     <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
-        <ul class="contact-list">
-          <li>email: <a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-        </ul>
-      </div>
-
       <div class="footer-col footer-col-2">
         <ul class="social-media-list">
+          <li><a href="mailto:{{ site.email }}"><span class="icon">{% include icon-mail.svg %}</span>&nbsp;{{ site.email }}</a></li>
           {% if site.github_username %}
           <li>
             {% include icon-github.html username=site.github_username %}
@@ -25,10 +20,13 @@
           </li>
           {% endif %}
           <li>
+            <a rel="me" href="https://forcedconversation.com/@squizzleflip"><span class="icon">{% include icon-mastodon.svg %}</span>&nbsp;<span class="username">squizzleflip@forcedconversation.com</span></a>
+          </li>
+          <li>
             <p class="rss-subscribe">
-                <a href="{{ " /feed.xml " | prepend: site.baseurl }}">subscribe via RSS</a>
+                <a href="{{ " /feed.xml " | prepend: site.baseurl }}"><span class="icon">{% include icon-rss.svg %}</span>&nbsp;<span class="username">subscribe via RSS</span></a>
             </p>
-        </li>
+          </li>
         </ul>
       </div>
 
